@@ -1,0 +1,315 @@
+/* Styles the main page. */
+body {
+    font-family: "Trebuchet MS", sans-serif;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+
+    /* Darkens the background slightly while still showing the details of the night-time adventure scene. */
+    background-image: linear-gradient(
+        rgba(8, 13, 30, 0.68),
+        rgba(8, 13, 30, 0.68)
+    ),
+    url("side-quest-bg.png");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: #f7e7c6;
+    line-height: 1.5;
+}
+
+/* Styles the main Side Quest heading. */
+h1 {
+    font-family: "Courier New", monospace;
+    font-size: 64px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 6px;
+
+    /* Gives the title a warm fantasy-game appearance. */
+    color: #fff1c7;
+
+    /* Adds layered shadows to make the title stand out. */
+    text-shadow:
+        3px 3px 0 #5b477c,
+        0 0 8px rgba(255, 241, 199, 0.55),
+        0 0 18px rgba(201, 168, 93, 0.35);
+
+    /* Adds a subtle glow around the title. */
+    filter: drop-shadow(0 0 10px rgba(255, 241, 199, 0.2));
+
+    /* Makes changes to the title appear smoothly. */
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+/* Gives the title a subtle glow when hovered. */
+h1:hover {
+    transform: scale(1.02);
+
+    filter: drop-shadow(0 0 14px rgba(255, 241, 199, 0.4));
+}
+
+/* Styles the introduction text. */
+body > p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px #171b32;
+}
+
+/* Styles the XP display like a game HUD. */
+#xp-display {
+    margin: 25px auto;
+    padding: 12px 25px;
+    max-width: 300px;
+
+    background-color: #242d4d;
+    border: 4px solid #c9a85d;
+    border-radius: 15px;
+
+    box-shadow:
+        0 6px 0 #151a30,
+        0 0 18px rgba(201, 168, 93, 0.2);
+
+    transition: transform 0.2s ease;
+}
+
+/* Gives the XP display a small interactive effect. */
+#xp-display:hover {
+    transform: translateY(-2px);
+}
+
+/* Styles the XP heading. */
+#xp-display h2 {
+    margin: 5px;
+    color: #fff4d6;
+}
+
+/* Styles the section headings. */
+h2 {
+    color: #fff4d6;
+    text-shadow: 2px 2px #171b32;
+}
+
+/* Styles the Side Quest generator like a small game panel. */
+#generator {
+    margin: 25px auto;
+    padding: 30px;
+    max-width: 600px;
+
+    /* Uses a dark blue and purple background to match the Quest Log. */
+    background-color: #242d4d;
+
+    border: 4px solid #75639b;
+    border-radius: 20px;
+
+    box-shadow:
+        0 6px 0 #151a30,
+        0 0 25px rgba(117, 99, 155, 0.2);
+
+    transition: transform 0.2s ease;
+}
+
+/* Gives the generator a subtle lift when hovered. */
+#generator:hover {
+    transform: translateY(-2px);
+}
+
+/* Styles the generated Side Quest display. */
+#generated-habit {
+    padding: 25px;
+    margin: 10px auto 25px;
+
+    /* Uses a warm parchment colour to contrast with the dark generator panel. */
+    background-color: #fff4d6;
+
+    border: 3px solid #c9a85d;
+    border-radius: 12px;
+
+    font-family: "Courier New", monospace;
+    font-size: 20px;
+    font-weight: bold;
+
+    color: #29213b;
+
+    /* Makes the generated quest feel like a display screen. */
+    box-shadow: inset 0 0 12px rgba(128, 100, 162, 0.15);
+
+    min-height: 30px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/* Gives the generated quest a small interactive effect. */
+#generated-habit:hover {
+    transform: scale(1.01);
+
+    box-shadow:
+        inset 0 0 12px rgba(128, 100, 162, 0.15),
+        0 0 10px rgba(255, 244, 214, 0.3);
+}
+
+/* Styles all buttons. */
+button {
+    padding: 12px 20px;
+    margin: 8px;
+
+    border: none;
+    border-radius: 10px;
+
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    /* Gives the buttons a game-like appearance. */
+    box-shadow: 0 4px 0 #151a30;
+
+    /* Makes button movement and effects appear smoothly. */
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.15s ease,
+        filter 0.15s ease;
+}
+
+/* Adds a small movement when the user hovers over a button. */
+button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+}
+
+/* Makes the button feel pressed when clicked. */
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #151a30;
+}
+
+/* Styles the Generate button. */
+#generate-button {
+    background-color: #b9e4d0;
+    color: #354f43;
+}
+
+/* Styles the Accept button. */
+#accept-button {
+    background-color: #f4b8c8;
+    color: #593849;
+}
+
+/* Styles the Reject button. */
+#reject-button {
+    background-color: #c9b8e5;
+    color: #493858;
+}
+
+/* Styles the Quest Log table. */
+table {
+    width: 90%;
+    margin: 25px auto;
+
+    border-collapse: separate;
+    border-spacing: 0;
+
+    /* Uses a dark panel to match the Side Quest generator. */
+    background-color: #242d4d;
+
+    border: 4px solid #75639b;
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 6px 0 #151a30,
+        0 0 25px rgba(117, 99, 155, 0.2);
+}
+
+/* Styles the Quest Log table cells. */
+th,
+td {
+    padding: 14px;
+    border-bottom: 2px solid #41496a;
+}
+
+/* Styles the Quest Log table headings. */
+th {
+    background-color: #66558a;
+    color: #fff4d6;
+
+    font-family: "Courier New", monospace;
+}
+
+/* Styles the Quest Log information. */
+td {
+    color: #f7e7c6;
+    font-weight: bold;
+}
+
+/* Gives the Quest Log rows a slightly lighter background. */
+tbody tr {
+    background-color: #2b3557;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.15s ease;
+}
+
+/* Adds a subtle effect when hovering over a quest. */
+tbody tr:hover {
+    background-color: #354063;
+}
+
+/* Styles buttons inside the Quest Log. */
+td button {
+    margin: 3px;
+    padding: 8px 12px;
+    font-size: 13px;
+}
+
+/* Removes the bottom border from the final row. */
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Makes the Status column visually clear. */
+td:nth-child(2) {
+    font-weight: bold;
+}
+
+/* Makes the application responsive on smaller screens. */
+@media (max-width: 768px) {
+
+    body {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 42px;
+    }
+
+    body > p {
+        font-size: 16px;
+    }
+
+    #generator {
+        padding: 20px;
+    }
+
+    table {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 10px 6px;
+    }
+
+    button {
+        padding: 10px 14px;
+    }
+}

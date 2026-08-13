@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <!-- Page title displayed in the browser tab. -->
+    <title>Side Quest</title>
+
+    <!-- Links the CSS file to the webpage. -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Main heading for the application. -->
+    <h1>SIDE QUEST</h1>
+
+    <!-- Short description explaining the purpose of the application. -->
+    <p>Take a break. Do something good for yourself.</p>
+
+    <!-- Displays the user's current total XP. -->
+    <div id="xp-display">
+
+        <h2>⭐ Total XP: <span id="total-xp">0</span></h2>
+
+    </div>
+
+    <!-- Section where a random side quest will be generated. -->
+    <h2>🎮 READY FOR A SIDE QUEST?</h2>
+
+    <div id="generator">
+
+        <!-- The generated side quest will appear here. -->
+        <p id="generated-habit">
+            Press the button to discover your next side quest!
+        </p>
+
+        <!-- Button used to generate a random side quest. -->
+        <button id="generate-button">🎰 Spin for a Side Quest</button>
+
+        <!-- Buttons used to accept or reject the generated side quest. -->
+        <div id="choice-buttons">
+
+            <button id="accept-button">Accept Quest</button>
+
+            <button id="reject-button">Reject Quest</button>
+
+        </div>
+
+    </div>
+
+    <!-- Section where accepted side quests will be stored. -->
+    <h2>📜 QUEST LOG</h2>
+
+    <p>Complete your quests, earn XP, and level up your day!</p>
+
+    <!-- Table used to display accepted side quests. -->
+    <table>
+
+    <thead>
+
+        <tr>
+            <th>Side Quest</th>
+            <th>Status</th>
+            <th>XP</th>
+            <th>Actions</th>
+        </tr>
+
+    </thead>
+
+    <!-- Accepted Side Quests will be added here using JavaScript. -->
+    <tbody id="quest-table-body"></tbody>
+
+</table>
+
+    <!-- Links the HTML page to the JavaScript file. -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
