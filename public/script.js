@@ -273,6 +273,10 @@ async function loadQuests() {
 
             const row = document.createElement("tr");
 
+            if (quest.status === "Completed") {
+                row.classList.add("completed-quest");
+            }
+
             row.innerHTML = `
                 <td>${quest.habit}</td>
 

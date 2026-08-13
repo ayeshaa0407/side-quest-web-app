@@ -280,6 +280,10 @@ td:nth-child(2) {
     font-weight: bold;
 }
 
+.completed-quest {
+    opacity: 0.65;
+}
+
 /* Makes the application responsive on smaller screens. */
 @media (max-width: 768px) {
 
