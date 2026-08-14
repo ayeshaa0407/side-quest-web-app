@@ -209,7 +209,7 @@ app.delete("/quests/:id", (req, res) => {
 
         // Sends a successful response to the frontend.
         res.status(200).json({
-            message: "Side Quest deleted successfully :)"
+            message: "Side Quest deleted successfully! 😊"
         });
 
     });
