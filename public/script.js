@@ -280,7 +280,7 @@ async function loadQuests() {
             row.innerHTML = `
                 <td>${quest.habit}</td>
 
-                <td>${quest.status}</td>
+               <td>${quest.status === "Completed" ? "Completed ✓" : quest.status}</td>
 
                 <td>${quest.xp} XP</td>
 
@@ -288,7 +288,7 @@ async function loadQuests() {
                     ${
                         quest.status === "Active"
                             ? `<button onclick="completeQuest(${quest.id})">Complete Quest</button>`
-                            : "Completed ✓"
+                            : ""
                     }
 
                     <button onclick="deleteQuest(${quest.id})">
