@@ -1,6 +1,7 @@
 # 🎮 Side Quest 
 
-This web application is hosted on Render. Click the link to view Side Quest live: https://side-quest-web-app.onrender.com
+This web application is hosted on Render. Click the link to view Side Quest live: 
+https://side-quest-web-app.onrender.com
 
 A small web application that turns taking a break into a mini adventure.
 
