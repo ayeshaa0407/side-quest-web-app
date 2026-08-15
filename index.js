@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
-const PORT = 3000; // Port the server runs on.
+const PORT = process.env.PORT || 3000; // Uses Render's port when deployed and port 3000 locally.
 
 // CONNECT THE SERVER TO THE DATABASE.
 const db = new sqlite3.Database("./sidequest.db", (err) => {
@@ -43,9 +43,9 @@ const db = new sqlite3.Database("./sidequest.db", (err) => {
 });
 
 // START THE SERVER.
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
 
-    console.log(`API server running on http://localhost:${PORT}`);
+    console.log(`API server running on port ${PORT}`);
 
 });
 
