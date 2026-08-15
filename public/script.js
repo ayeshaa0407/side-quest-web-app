@@ -95,7 +95,7 @@ async function loadXP() {
     // Requests the total XP from the server.
     try {
 
-        const response = await fetch("http://localhost:3000/xp");
+        const response = await fetch("/xp");
 
         if (!response.ok) {
 
@@ -160,7 +160,7 @@ acceptButton.addEventListener("click", async () => {
     try {
 
         // Sends the accepted Side Quest to the backend.
-        const response = await fetch("http://localhost:3000/quests", {
+        const response = await fetch("/quests", {
 
             method: "POST",
 
@@ -234,7 +234,7 @@ async function loadQuests() {
     // Requests all accepted Side Quests from the server.
     try {
 
-        const response = await fetch("http://localhost:3000/quests");
+        const response = await fetch("/quests");
 
         if (!response.ok) {
 
@@ -322,7 +322,7 @@ async function completeQuest(id) {
     try {
 
         // Sends a request to the server to update the quest.
-        const response = await fetch(`http://localhost:3000/quests/${id}`, {
+        const response = await fetch(`/quests/${id}`, {
 
             method: "PATCH",
 
@@ -372,8 +372,7 @@ async function deleteQuest(id) {
     try {
 
         // Sends a request to the server to delete the Side Quest.
-        const response = await fetch(`http://localhost:3000/quests/${id}`, {
-
+        const response = await fetch(`/quests/${id}`, {
             method: "DELETE"
 
         });
