@@ -1,5 +1,7 @@
 # 🎮 Side Quest 
 
+This web application is hosted on Render. Click the link to view Side Quest live: https://side-quest-web-app.onrender.com
+
 A small web application that turns taking a break into a mini adventure.
 
 Side Quest generates fun and healthy activities that encourage users to take short breaks from studying, working or spending too much time on a screen. Users can accept or reject quests, keep accepted quests in a Quest Log, complete them and earn XP.
